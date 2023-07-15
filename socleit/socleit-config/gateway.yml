@@ -1,0 +1,19 @@
+server:
+  port : 8090
+
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+      routes:
+        - id: assignment
+          uri: lb://assignment
+          predicates:
+            - Path=/assignment/**
+        - id: edgeservices
+          uri: lb://edgeservices
+          predicates:
+            - Path=/edgeservices/**

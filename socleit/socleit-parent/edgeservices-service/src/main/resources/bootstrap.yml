@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: edgeservices
+  cloud:
+    config:
+      uri: http://localhost:8888
+  datasource:
+    url: jdbc:h2:mem:dbEdgServices
+    driverClassName: org.h2.Driver
+    username: siwar
+    password: 
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+server:
+   port: 8086
+
